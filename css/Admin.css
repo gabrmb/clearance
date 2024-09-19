@@ -1,0 +1,61 @@
+/* ManageUsers.css */
+
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 60px;
+    margin-left: 250px;
+}
+
+.widget {
+    flex: 1;
+    min-width: 150px;
+    max-width: 250px;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.widget-header {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.widget-header i {
+    font-size: 2em;
+}
+
+.widget-content {
+    font-size: 2em;
+}
+
+.total-users {
+    background-color: #007bff; /* Blue */
+}
+
+.active-users {
+    background-color: #28a745; /* Green */
+}
+
+.inactive-users {
+    background-color: #fd7e14; /* Orange */
+}
+
+.deleted-users {
+    background-color: #dc3545; /* Red */
+}
+
+/* ManageUsers.css */
+
+a.widget {
+    display: block;
+    text-decoration: none;
+}
+
+a.widget:hover {
+    opacity: 0.6;
+}

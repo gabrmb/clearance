@@ -1,0 +1,300 @@
+/* Reset default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../Images/mathsBckgrnd3.jpg');
+}
+
+/* Top Navigation Bar */
+.topnav {
+    overflow: hidden;
+    background-color: red;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s; /* Smooth transition for collapsing effect */
+    display: flex;
+    justify-content: flex-end; /* Push links to the right */
+    height: 40px;
+}
+
+.topnav a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.topnav a i {
+    display: inline-block; /* Display icons */
+    margin-right: 5px; /* Adjust spacing between icon and text */
+}
+
+.topnav a.text {
+    display: inline-block; /* Display text */
+}
+
+/* Media Query for Responsive Design */
+@media screen and (max-width: 768px) {
+    .topnav a.text {
+        display: none; /* Hide text links */
+    }
+
+    .topnav a {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .topnav a i {
+        margin-right: 0; /* Remove spacing for icons */
+    }
+}
+
+/* Sidebar */
+.sidebar {
+    height: calc(100% - 40px); /* Adjust height to exclude topnav height */
+    width: 250px;
+    position: fixed;
+    top: 40px; /* Height of the topnav */
+    left: 0;
+    background-color: #000;
+    padding-top: 30px;
+    box-shadow: 2px 0px 5px rgba(0,0,0,0.1);
+    color: white;
+    transition: width 0.3s;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    z-index: 1001; /* Ensure sidebar is above content */
+}
+
+.sidebar .sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.sidebar .sidebar-title {
+    color: white;
+    margin: 0;
+}
+
+.sidebar .toggle-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    display: flex;
+    align-items: center;
+    transition: padding 0.3s;
+    border-top: 1px solid rgb(236, 15, 15); /* Add top border */
+    border-bottom: 1px solid rgb(231, 20, 20); /* Add bottom border */
+}
+
+.sidebar a i {
+    margin-right: 10px;
+}
+
+.sidebar a:hover {
+    background-color: white;
+    color: #06225f;
+}
+
+.sidebar.collapsed {
+    width: 60px;
+}
+
+.sidebar.collapsed .sidebar-title,
+.sidebar.collapsed .link-text {
+    display: none;
+}
+
+.sidebar.collapsed a {
+    justify-content: center;
+}
+
+.sidebar.collapsed a i {
+    margin-right: 0;
+}
+
+/* Main content */
+.content {
+    padding: 20px;
+    margin-top: 40px; /* Add a top margin to avoid content overlay */
+    transition: margin-left 0.3s, width 0.3s;
+    background-color: white;
+    opacity: 0.77;
+    width: calc(100% - 250px); /* Adjust width to exclude sidebar width */
+    margin-left: 250px; /* Adjust for the sidebar width */
+    z-index: 1; /* Ensure content is below sidebar */
+}
+
+.content.collapsed {
+    width: calc(100% - 60px); /* Adjust width when sidebar is collapsed */
+    margin-left: 60px; /* Adjust for the collapsed sidebar width */
+}
+
+@media screen and (max-width: 768px) {
+    .content {
+        width: calc(100% - 60px); /* Full width minus padding */
+        margin-left: 60px; /* Account for the sidebar width */
+    }
+
+    .content.collapsed {
+        width: calc(100% - 60px); /* Full width minus padding */
+        margin-left: 60px; /* Account for the sidebar width */
+    }
+}
+
+/* /* Form Styling */
+/*form {
+    background-color: rgb(31, 196, 196);
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto; /* Center the form */
+    /*transition: margin-left 0.3s; */
+/*} */
+
+form.collapsed {
+    margin-left: calc((100% - 800px) / 2 + 60px); /* Adjust form position when sidebar is collapsed */
+}
+
+.GroupFormat {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    flex: 1;
+    margin-right: 20px;
+    min-width: 200px;
+}
+
+.form-group:last-child {
+    margin-right: 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 0.8px solid #06225f;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.Question label {
+    display: block;
+    padding: 5px;
+}
+
+.Question input {
+    width: 100%; /* Adjust width to fill available space */
+    border: 0.8px solid #06225f;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+.Question {
+    flex: 1;
+}
+
+.message {
+    margin-bottom: 20px;
+}
+
+.message label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.message textarea {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.bButton {
+    text-align: center;
+}
+
+.bButton button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.bButton button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 600px) {
+    .GroupFormat {
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin-right: 0;
+        margin-bottom: 20px; /* Add space between form groups */
+    }
+
+    .Question input {
+        width: 100%;
+    }
+
+    .content {
+        width: calc(100% - 60px); /* Full width minus padding */
+        margin-left: 60px; /* Account for the sidebar width */
+    }
+
+    .content.collapsed {
+        width: calc(100% - 60px); /* Full width minus padding */
+        margin-left: 60px; /* Account for the sidebar width */
+    }
+
+    form {
+        width: 100%; /* Full width for form */
+        margin-left: 0; /* No extra margin */
+    }
+
+    form.collapsed {
+        margin-left: 0; /* No extra margin */
+    }
+}

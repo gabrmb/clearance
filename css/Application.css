@@ -1,0 +1,169 @@
+/* Style for the form and table */
+
+
+h3{
+    color: red;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.form-container{
+    width: 80%;
+    margin: 20px auto;
+    /* background-color: #fff; */
+    background-color: #ebdcdc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 260px;
+    margin-top: 15px;
+
+}
+
+.table-container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #ebdcdc;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 260px;
+}
+
+
+.info-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: red;
+    color: white;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+}
+
+.info-section p {
+    font-size: 16px;
+    margin: 5px;
+}
+
+.search-bar {
+    width: 200px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    margin: 5px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+    height: auto;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;    
+}
+
+.form-field {
+    /* margin-bottom: 15px; */
+
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 5px;
+}
+
+.form-field input, .form-field select {
+    /* width: 50%; */
+    /* padding: 10px; */
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+
+    height: 35px;
+    width: 95%;
+    padding: 0 10px;
+    margin: 5px;
+}
+
+.submit-btn {
+    display: flex;
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    justify-content: center;
+}
+
+.submit-btn:hover {
+    background-color: darkred;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.table-container th, .table-container td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.table-container th {
+    background-color: red;
+    color: white;
+    font-size: 12px;
+}
+.table-container td {
+    border: 1px solid #ddd; /* Adds grid lines */
+    padding: 6px;
+    text-align: left;
+    font-size: 0.82rem;
+}
+
+.table-container tr{
+    background-color: #f09898;
+}
+
+.table-container tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-container tr:hover {
+    background-color: #ddd;
+}
+
+.LinkButton {
+    text-align: left; /* Center the text inside the container */
+    margin: 4px;
+}
+.continue-btn{
+    text-decoration: none; /* Remove the underline */
+    display: inline-block; /* Optional: Makes the link behave more like a button */
+    background-color: black;
+    color: white;
+    width: 220px;
+    height: 35px;
+    border-radius: 5px;
+    justify-content: center;
+}

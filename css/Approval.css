@@ -1,0 +1,275 @@
+
+.container {
+    width: 100%;
+    max-width: 1070px;
+    margin: 0 auto;
+    margin-left: 260px;
+    margin-top: 20px;   
+}
+
+/* .form-container{
+    background-color: #ebdcdc;
+} */
+.title-bar1{
+    color: black;
+    background-color: #ebdcdc;
+    margin-top: 50px;
+    margin-left: 260px;
+    width: 100%;
+    max-width: 1070px;
+    font-size: 14px;
+}
+.title-bar {
+    background-color: red;
+    padding: 10px;
+    font-size: 12px;
+    color: white;
+}
+
+/* .form-content {
+    padding: 15px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: none;
+    width: 75%;
+} */
+
+.form-field{
+     /* margin-bottom: 15px; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    padding-bottom: 10px;
+}
+
+/* form{
+    background-color: #ebdcdc;
+    height: 230px;
+    margin: 20px;
+} */
+
+form h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+form label{
+    font-size: small;
+}
+/* form input, form select {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: none;
+} */
+
+form button {
+    background-color: rgb(11, 134, 58);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.submit-button{
+    justify-content: center;
+    margin-left: 280px;
+    margin-bottom: 100px;
+}
+.table-container {
+    background-color: #ebdcdc;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+.pagination-and-search {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    background-color: rgba(196, 196, 196, 0.911);
+    height: 38px;
+}
+.pagination {
+    font-size: 14px;
+    margin: 4px;
+}
+.pagination select {
+    padding: 5px;
+    font-size: 12px;
+}
+.search {
+    font-size: 14px;
+}
+.search input {
+    padding: 5px;
+    font-size: 12px;
+    margin: 4px;
+    border: none;
+    border-radius: 3px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    
+}
+th {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: 1px solid #ddd; /* Adds grid lines */
+}
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+    border: 1px solid #ddd; /* Adds grid lines */
+    text-align: center;
+}
+td .bx {
+    font-size: 16px;
+    cursor: pointer;
+}
+tr:nth-child(even) {
+    /* background-color: #f2f2f2; */
+    background-color: white;
+}
+
+tr:hover {
+    background-color: #eebdbd;
+}
+.action-buttons i.bx.bxs-file-archive {
+    color: green;
+    font-size: 18px;
+}
+.action-buttons i.bx.bxs-edit {
+    color: blue;
+    font-size: 18px;
+}
+
+/* Status color styles */
+.status-pending {
+    color: blue;
+    font-weight: bold;
+}
+
+.status-approved {
+    color: green;
+    font-weight: bold;
+}
+
+.status-rejected {
+    color: red;
+    font-weight: bold;
+}
+
+
+
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 55%;
+    height: 85%;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid red;
+}
+.modal-body{
+    margin-top: 15px;
+}
+
+form{
+    padding: 15px;
+    margin-top: 10px;
+    margin-left: 0px;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    border: none;
+    width: 100%;
+    background-color: #ebdcdc;
+}
+.form-row{
+    /* margin-bottom: 15px; */
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 10px;
+
+
+    
+    flex-direction: column; /* Stack label above the input */
+    margin-bottom: 15px; /* Add space between rows */
+}
+
+form input, form select {
+    width: 94%;
+    padding: 8px;
+    margin: 6px 0;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px;
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Flexbox for form fields */
+.form-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.form-row label {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.form-row input,
+.form-row select,
+.form-row textarea {
+    flex: 2;
+}
+
+/* Button styles */
+.submit-btn {
+    text-align: center;
+}
+
+
+
+

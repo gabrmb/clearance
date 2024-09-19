@@ -1,0 +1,429 @@
+/* Reduced-size ManageUsers.css */
+
+/* Container Styles */
+.container {
+    width: 78%; /* Reduced width from 80% to 60% */
+    margin: auto;
+    background-color: #ebdcdc;
+    padding: 12px; /* Reduced padding from 20px to 12px */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-left: 265px; /* Reduced margin-left for a more compact view */
+    margin-top: 45px; /* Reduced top margin for a more compact view */
+}
+
+/* Page Title */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h3 {
+    margin: 0;
+}
+
+.add-btn {
+    background-color: #007bff; /* Blue color for Add button */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.add-btn i {
+    margin-right: 5px;
+}
+
+.add-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Title Bar */
+.title-bar {
+    background-color: red;
+    color: #fff;
+    padding: 6px; /* Reduced padding */
+    margin-bottom: 12px; /* Reduced margin-bottom */
+    text-align: left;
+    border-radius: 5px;
+    /*font-size: 1.4rem; /* Reduced font size */
+}
+
+/* Controls (Entries Dropdown and Search Bar) */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px; /* Reduced margin-bottom */
+}
+
+.entries, .search {
+    display: flex;
+    align-items: center;
+}
+
+label {
+    margin-right: 6px; /* Reduced margin-right */
+    font-size: 0.9rem; /* Reduced font size */
+}
+
+#entries-select, #search-input {
+    padding: 3px; /* Reduced padding */
+    font-size: 0.9rem; /* Reduced font size */
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 12px; /* Reduced margin-bottom */
+}
+
+thead {
+    background-color: red;
+    color: #fff;
+    font-size: 0.9rem; /* Reduced font size */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Adds grid lines */
+    padding: 6px;
+    text-align: left;
+    font-size: 0.82rem;
+}
+
+/* Set fixed width for Email and Department columns */
+th:nth-child(7), td:nth-child(7) { /* 7th column is Email */
+    width: 110px; /* Adjust the width as needed */
+    max-width: 110px;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+
+th:nth-child(4), td:nth-child(4) { /* 4th column is Department */
+    width: 100px; /* Adjust the width as needed */
+    max-width: 100px;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+th:nth-child(5), td:nth-child(5) { /* 5th column is Contact */
+    width: 90px; /* Adjust the width as needed */
+    max-width: 90px;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+
+}
+th:nth-child(2), td:nth-child(2) { /* 2nd column is FullName */
+    width: 115px; /* Adjust the width as needed */
+    max-width: 115px;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #eebdbd;
+}
+
+/* Style for Action Buttons */
+
+/* Ensure buttons are inline and aligned horizontally */
+td {
+    white-space: nowrap; /* Prevent wrapping of the content */
+}
+
+.edit-btn, .delete-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.2rem;
+    display: inline-flex; /* Use inline-flex to keep buttons inline */
+    align-items: center;  /* Align icons to the center of the button */
+}
+
+/* Blue color for the Edit button */
+.edit-btn i {
+    color: #007bff;
+}
+
+/* Red color for the Delete button */
+.delete-btn i {
+    color: #ff0000;
+}
+
+/* Optional hover effect for buttons */
+.edit-btn:hover i, .delete-btn:hover i {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */  
+    overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #cf6262;
+    margin: 5% auto; /* 10% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    height: auto;
+    border-radius: 8px;
+    
+}
+
+.modal form{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+    height: auto;
+    color: white;
+}
+
+/* Modal Header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Hover effects for close button */
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Modal Form Input Styles */
+.input-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+.input-box:nth-child(2n){
+    justify-content: end;
+}
+.input-box label, .gender-title{
+    width: 95%;
+    color: white;
+    font-weight: bold;
+    margin: 5px 0;
+}
+.gender-title{
+    font-size: 16px;
+}
+.input-box input{
+    height: 35px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    outline: none;
+}
+
+.input-box select{
+    height: 35px;
+    width: 95%;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    outline: none;
+}
+
+
+.input-box input:is(:focus,:valid){
+    box-shadow: 0 3px 6px rgb(24, 22, 22);
+}
+
+.input-box select:is(:focus,:valid){
+    box-shadow: 0 3px 6px rgb(24, 22, 22);
+}
+
+.gender-category label{
+    padding: 0 20px 0 5px;
+    font-size: 14px;
+}
+.gender-category{
+    color: gainsboro;
+}
+.gender-category label, .gender-category input{
+    cursor: pointer;
+}
+.alert p{
+    font-size: 14px;
+    font-style: italic;
+    color: white;
+    margin: 5px 0;
+    padding: 10px;
+    line-height: 1.5;
+}
+.alert a{
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(243, 206, 206);
+}
+.alert a:hover{
+    font-weight: bold;
+    text-decoration: underline;
+    color: rgb(53, 3, 3);
+}
+.button-container button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-image: linear-gradient(to right,red, rgb(231, 130, 130));
+    cursor: pointer;
+    transition: 0.3s;
+}
+.button-container button:hover{
+    background-image: linear-gradient(rgb(145, 27, 27), rgb(189, 119, 119));
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+
+
+/* Styles specific to the Edit Modal */
+.modal-edit {
+    display: none; /* Initially hidden */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* On top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+    margin-left: 170px;
+}
+
+.modal-content-edit {
+    /* background-color: #fefefe; */
+    background-color: #cf6262;
+    /* margin: 15% auto; */
+    margin-left: 120px;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 55%; /* Adjust width as needed */
+}
+
+.modal-header-edit {
+    padding: 30px;
+    border-bottom: 1px solid #ddd;
+    color: white;
+}
+
+.close-edit {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 1px;
+}
+
+.close-edit:hover,
+.close-edit:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.modal-body-edit {
+    padding: 20px;
+}
+
+.input-box-edit {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 50%;
+   
+}
+.input-box-edit input{
+    width: 100%;
+    height: 27px;
+    border: none;
+    border-radius: 3px;
+    padding: 4px;
+}
+.input-box-edit select{
+    width: 100%;
+    height: 27px;
+    border: none;
+    border-radius: 3px;
+    padding: 4px;
+}
+
+.input-box-edit label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.button-container-edit {
+    text-align: center;
+}
+
+
+.button-container-edit button{
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-image: linear-gradient(to right,red, rgb(231, 130, 130));
+    cursor: pointer;
+    transition: 0.3s;
+}
+.button-container-edit button:hover{
+    background-image: linear-gradient(rgb(145, 27, 27), rgb(189, 119, 119));
+}

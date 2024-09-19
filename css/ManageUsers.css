@@ -1,0 +1,89 @@
+.UsersDetails{
+    padding: 20px;
+    margin-top: 60px; /* Add a top margin to avoid content overlay */
+    transition: margin-left 0.3s, width 0.3s;
+    background-color: white;
+    opacity: 0.77;
+    width: calc(100% - 250px); /* Adjust width to exclude sidebar width */
+    margin-left: 250px; /* Adjust for the sidebar width */
+    z-index: 1; /* Ensure content is below sidebar */
+}
+
+/* Form Styling */
+form {
+    background-color: gray;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto; /* Center the form */
+    transition: margin-left 0.3s;
+}
+
+.GroupFields{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.form-field {
+    flex: 1;
+    margin-right: 20px;
+    min-width: 200px;
+}
+
+.form-field:last-child {
+    margin-right: 0;
+}
+
+.form-field label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-field input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 0.8px solid #06225f;
+}
+
+.select-data{
+    flex: 1;
+    margin-right: 20px;
+    min-width: 200px;
+}
+
+.select-data label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+.select-data select{
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 0.8px solid #06225f;
+}
+
+
+.bButton {
+    text-align: center;
+}
+
+.bButton button {
+    padding: 10px 20px;
+    background-color: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.bButton button:hover {
+    background-color: black;
+}
